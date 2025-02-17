@@ -16,7 +16,7 @@ if not found:
     print("no .mp4 found!")
     exit()
 else:
-    print("using " + videoName)
+    print("using first video in directory: " + videoName)
 
 cap = cv2.VideoCapture(videoName)
 
@@ -70,5 +70,5 @@ while(ret):
         print("Frame(current/total): " + str(imageNumber) + "/" + str(keepNumber) + ", Sharpness(chosen/worst): " + str(int(bestVariance)) + "/" +str(int(worstVariance)) + "        ", end='\r')
 print("Frame(current/total): " + str(imageNumber) + "/" + str(keepNumber) + ", Sharpness(chosen/worst): " + str(int(bestVariance)) + "/" +str(int(worstVariance)) + "        ")
 
-
+input("Press any key to close.")
 
