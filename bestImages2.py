@@ -65,7 +65,8 @@ while(ret):
                 worstVariance = variance
             if worstVariance > variance:
                 worstVariance = variance
-    if ret: 
+    if ret:
+        bestFrame = cv2.rotate(bestFrame, cv2.ROTATE_90_CLOCKWISE) 
         cv2.imwrite("frame" + str(imageNumber) + ".jpeg", bestFrame)
         print("Frame(current/total): " + str(imageNumber) + "/" + str(keepNumber) + ", Sharpness(chosen/worst): " + str(int(bestVariance)) + "/" +str(int(worstVariance)) + "        ", end='\r')
 print("Frame(current/total): " + str(imageNumber) + "/" + str(keepNumber) + ", Sharpness(chosen/worst): " + str(int(bestVariance)) + "/" +str(int(worstVariance)) + "        ")
